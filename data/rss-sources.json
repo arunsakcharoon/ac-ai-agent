@@ -1,0 +1,18 @@
+[
+  {
+    "label": "OpenAI",
+    "url": "https://openai.com/blog/rss.xml"
+  },
+  {
+    "label": "Anthropic",
+    "url": "https://www.anthropic.com/rss.xml"
+  },
+  {
+    "label": "TechCrunch AI",
+    "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+  },
+  {
+    "label": "MIT Technology Review",
+    "url": "https://www.technologyreview.com/feed/"
+  }
+]

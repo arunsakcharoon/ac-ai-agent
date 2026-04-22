@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ai-workflow-automation",
+    "name": "AI Workflow Automation",
+    "description": "End-to-end automation of repetitive business processes using LLMs and custom AI agents.",
+    "category": "Automation",
+    "link": null,
+    "featured": true
+  },
+  {
+    "id": "llm-integration",
+    "name": "LLM Integration Consulting",
+    "description": "Embed large language models into your existing products and internal tools with minimal friction.",
+    "category": "Integration",
+    "link": null,
+    "featured": true
+  },
+  {
+    "id": "ai-agent-systems",
+    "name": "AI Agent Systems",
+    "description": "Design and deploy multi-agent systems that reason, plan, and act autonomously on your behalf.",
+    "category": "Agents",
+    "link": null,
+    "featured": true
+  },
+  {
+    "id": "ai-strategy",
+    "name": "AI Strategy & Roadmap",
+    "description": "Tailored AI adoption strategy — from identifying high-value use cases to building your first AI team.",
+    "category": "Strategy",
+    "link": null,
+    "featured": false
+  },
+  {
+    "id": "rag-systems",
+    "name": "RAG & Knowledge Systems",
+    "description": "Retrieval-augmented generation pipelines so your AI answers questions from your own data.",
+    "category": "Data",
+    "link": null,
+    "featured": false
+  },
+  {
+    "id": "ai-audit",
+    "name": "AI Readiness Audit",
+    "description": "A structured assessment of your organization's data, tools, and team readiness for AI adoption.",
+    "category": "Strategy",
+    "link": null,
+    "featured": false
+  }
+]

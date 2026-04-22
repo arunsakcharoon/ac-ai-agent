@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Read(//c/Users/arunsak/@ac-ai-agent/**)",
+      "Bash(npx create-next-app@latest ac-ai-landing --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(rm -rf /c/Users/arunsak/@ac-ai-agent/ac-ai-landing)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(gh auth *)"
+    ]
+  }
+}
