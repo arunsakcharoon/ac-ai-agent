@@ -20,7 +20,7 @@
     "name": "AI Agent Systems",
     "description": "Design and deploy multi-agent systems that reason, plan, and act autonomously on your behalf.",
     "category": "Agents",
-    "link": null,
+    "link": "/portfolio/ai-agent-systems",
     "featured": true
   },
   {
@@ -28,7 +28,7 @@
     "name": "RAG & Knowledge Systems",
     "description": "Retrieval-augmented generation pipelines so your AI answers questions from your own data.",
     "category": "Data",
-    "link": null,
+    "link": "/portfolio/rag-systems",
     "featured": false
   },
   {
@@ -36,7 +36,7 @@
     "name": "Cowork Projects",
     "description": "Collaborative AI projects built alongside clients and partner teams.",
     "category": "Collaboration",
-    "link": null,
+    "link": "/portfolio/cowork-projects",
     "featured": false
   },
   {
@@ -44,7 +44,7 @@
     "name": "AI Strategy & Roadmap",
     "description": "Tailored AI adoption strategy — from identifying high-value use cases to building your first AI team.",
     "category": "Strategy",
-    "link": null,
+    "link": "/portfolio/ai-strategy",
     "featured": false
   }
 ]
