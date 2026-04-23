@@ -4,15 +4,15 @@
     "name": "AI Workflow Automation",
     "description": "End-to-end automation of repetitive business processes using LLMs and custom AI agents.",
     "category": "Automation",
-    "link": null,
+    "link": "/portfolio/ai-workflow-automation",
     "featured": true
   },
   {
-    "id": "llm-integration",
-    "name": "LLM Integration Consulting",
-    "description": "Embed large language models into your existing products and internal tools with minimal friction.",
-    "category": "Integration",
-    "link": null,
+    "id": "skills",
+    "name": "Skills",
+    "description": "Custom AI skills built as Claude slash commands for finance, research, and agent workflows.",
+    "category": "Skills",
+    "link": "/skills",
     "featured": true
   },
   {
@@ -24,14 +24,6 @@
     "featured": true
   },
   {
-    "id": "ai-strategy",
-    "name": "AI Strategy & Roadmap",
-    "description": "Tailored AI adoption strategy — from identifying high-value use cases to building your first AI team.",
-    "category": "Strategy",
-    "link": null,
-    "featured": false
-  },
-  {
     "id": "rag-systems",
     "name": "RAG & Knowledge Systems",
     "description": "Retrieval-augmented generation pipelines so your AI answers questions from your own data.",
@@ -40,9 +32,17 @@
     "featured": false
   },
   {
-    "id": "ai-audit",
-    "name": "AI Readiness Audit",
-    "description": "A structured assessment of your organization's data, tools, and team readiness for AI adoption.",
+    "id": "cowork-projects",
+    "name": "Cowork Projects",
+    "description": "Collaborative AI projects built alongside clients and partner teams.",
+    "category": "Collaboration",
+    "link": null,
+    "featured": false
+  },
+  {
+    "id": "ai-strategy",
+    "name": "AI Strategy & Roadmap",
+    "description": "Tailored AI adoption strategy — from identifying high-value use cases to building your first AI team.",
     "category": "Strategy",
     "link": null,
     "featured": false

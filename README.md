@@ -22,37 +22,35 @@ npm run build
 
 ---
 
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page — hero, portfolio grid, AI news sidebar |
+| `/portfolio/ai-workflow-automation` | AI Workflow Automation project showcase |
+| `/skills` | Custom Claude AI skills (stock-report, portfolio-credit-risk, performance-attribution) |
+
+---
+
 ## Managing Content
 
-### Update Products / Services
-Edit [`data/products.json`](data/products.json):
+### Update landing page cards
+Edit [`data/products.json`](data/products.json). Set `"link"` to an internal route (e.g. `/portfolio/ai-workflow-automation`) or `null` to fall back to email CTA.
 
-```json
-[
-  {
-    "id": "my-service",
-    "name": "My AI Service",
-    "description": "Short description of what this does.",
-    "category": "Automation",
-    "link": "https://example.com",
-    "featured": true
-  }
-]
-```
+### Add a project to a portfolio page
+Edit the matching file in [`data/projects/`](data/projects/). Each entry supports: title, tagline, description, tools, githubUrl, liveUrl, screenshots, outcome.
 
-Set `"featured": true` to highlight a card. Set `"link": null` if there's no URL.
+### Add a screenshot to a project
+1. Drop the image into `public/projects/[category]/filename.png`
+2. Add `"/projects/[category]/filename.png"` to `screenshots` in the JSON
 
-### Add or Remove News Sources
-Edit [`data/rss-sources.json`](data/rss-sources.json):
+### Add a new portfolio category page
+1. Add to `data/products.json` with `"link": "/portfolio/[id]"`
+2. Create `data/projects/[id].json`
+3. Copy `app/portfolio/ai-workflow-automation/page.tsx` → `app/portfolio/[id]/page.tsx` and update the category label
 
-```json
-[
-  { "label": "OpenAI Blog", "url": "https://openai.com/blog/rss.xml" },
-  { "label": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/" }
-]
-```
-
-News is fetched automatically every 6 hours via Next.js ISR — no rebuild needed.
+### Add or remove news sources
+Edit [`data/rss-sources.json`](data/rss-sources.json). News refreshes automatically every 6 hours via ISR — no rebuild needed.
 
 ---
 
@@ -67,9 +65,18 @@ News is fetched automatically every 6 hours via Next.js ISR — no rebuild neede
 
 ## Project Structure
 ```
-/app             — Pages and layout
-/components      — UI sections (Hero, Services, News, About)
-/data            — Content config (products.json, rss-sources.json)
-/lib             — Utility functions (news fetcher)
-/public          — Static assets
+/app
+  page.tsx                          — Home page
+  portfolio/ai-workflow-automation/ — Portfolio category page
+  skills/                           — Skills showcase
+/components                         — UI sections
+/contexts                           — LanguageContext (EN/TH)
+/data
+  products.json                     — Landing page portfolio cards
+  rss-sources.json                  — News RSS sources
+  projects/                         — Per-category project lists
+/lib
+  fetchNews.ts                      — RSS fetch + parse
+  translations.ts                   — EN/TH strings
+/public                             — Static assets
 ```

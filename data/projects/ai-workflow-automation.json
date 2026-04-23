@@ -1,0 +1,13 @@
+[
+  {
+    "id": "my-first-agent",
+    "title": "ac AI Agent",
+    "tagline": "Conversational AI agent with web search, weather, file I/O, and calculator",
+    "description": "A Python AI agent built on the Anthropic SDK. Runs as a command-line tool or a Flask web chat UI. The agent maintains full conversation memory across turns and uses five tools: live web search via Tavily, real-time weather via Open-Meteo, local file read/write, and a safe math evaluator. Each tool returns structured error messages so the agent never crashes or hallucinates on failures.",
+    "tools": ["Python", "Anthropic SDK", "Flask", "Tavily API", "Open-Meteo"],
+    "githubUrl": "https://github.com/arunsakcharoon/my-first-agent",
+    "liveUrl": null,
+    "screenshots": [],
+    "outcome": "Functional agentic loop with structured tool use and dual CLI + web interface"
+  }
+]

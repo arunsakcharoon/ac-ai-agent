@@ -15,18 +15,31 @@
 ```
 /
 ├── app/
-│   ├── layout.tsx          — Root layout, global metadata
-│   └── page.tsx            — Home page, composes all sections
+│   ├── layout.tsx                          — Root layout, LanguageProvider, global metadata
+│   ├── page.tsx                            — Home page
+│   ├── portfolio/
+│   │   └── ai-workflow-automation/
+│   │       └── page.tsx                   — Portfolio category page
+│   └── skills/
+│       └── page.tsx                       — Skills showcase page
 ├── components/
-│   ├── HeroSection.tsx
-│   ├── ServicesSection.tsx
-│   ├── NewsSection.tsx
-│   └── AboutSection.tsx
+│   ├── HeroSection.tsx                    — Hero (client — uses translations)
+│   ├── AboutSection.tsx                   — About strip (client — uses translations)
+│   ├── ShowcaseSection.tsx                — Portfolio grid (client — uses translations)
+│   ├── NewsSidebar.tsx                    — News sidebar (client — uses translations)
+│   ├── Footer.tsx                         — Footer CTA (client — uses translations)
+│   ├── LangSwitcher.tsx                   — EN/TH toggle (client)
+│   └── PageHeader.tsx                     — Nav for inner pages (server, imports LangSwitcher)
+├── contexts/
+│   └── LanguageContext.tsx                — Language state + provider (client)
 ├── data/
-│   ├── products.json       — AI products/services config
-│   └── rss-sources.json    — RSS feed source list
+│   ├── products.json                      — Landing page portfolio cards
+│   ├── rss-sources.json                   — RSS feed source list
+│   └── projects/
+│       └── ai-workflow-automation.json    — Projects for that category page
 ├── lib/
-│   └── fetchNews.ts        — RSS fetching + parsing logic
+│   ├── fetchNews.ts                       — RSS fetching + parsing
+│   └── translations.ts                   — EN/TH string map
 ├── public/
 │   └── (images, favicon)
 ├── tailwind.config.ts
@@ -38,21 +51,44 @@
 
 ## Data Flows
 
-### Products / Services
+### Portfolio Cards (landing page)
 ```
 data/products.json
-  → imported in ServicesSection.tsx (typed via Product interface)
-  → rendered as grid cards
-  → no network request — build-time static
+  → ShowcaseSection.tsx (typed via Product interface)
+  → rendered as 3×2 grid
+  → link field: internal route | null (→ mailto fallback)
+  → build-time static import
+```
+
+### Portfolio Project Pages
+```
+data/projects/[category].json
+  → app/portfolio/[category]/page.tsx (typed via Project interface)
+  → rendered as full-width alternating cards
+  → build-time static import
+```
+
+### Skills Page
+```
+Skills data hardcoded in app/skills/page.tsx
+  → sourced from SKILL.md files in Claude local-agent-mode-sessions
+  → rendered as full-width skill cards (capabilities + triggers)
 ```
 
 ### AI News
 ```
 data/rss-sources.json
-  → read by lib/fetchNews.ts
-  → rss-parser fetches each feed URL at request time (server component)
+  → lib/fetchNews.ts (rss-parser, Promise.allSettled for parallel fetch)
   → Next.js ISR revalidates every 6 hours (revalidate = 21600)
-  → articles merged, sorted by date, top 9 rendered in NewsSection.tsx
+  → top 6 articles sorted by date → NewsSidebar.tsx
+```
+
+### Language Switching
+```
+LanguageContext (client, localStorage-persisted)
+  → LangSwitcher reads/writes lang state
+  → All landing page sections read lang via useLanguage()
+  → lib/translations.ts: { en: {...}, th: {...} }
 ```
 
 ---
@@ -60,7 +96,6 @@ data/rss-sources.json
 ## TypeScript Interfaces
 
 ```ts
-// Product
 interface Product {
   id: string
   name: string
@@ -70,7 +105,18 @@ interface Product {
   featured: boolean
 }
 
-// NewsItem
+interface Project {
+  id: string
+  title: string
+  tagline: string
+  description: string
+  tools: string[]
+  githubUrl: string | null
+  liveUrl: string | null
+  screenshots: string[]
+  outcome: string
+}
+
 interface NewsItem {
   title: string
   link: string
@@ -78,7 +124,6 @@ interface NewsItem {
   source: string
 }
 
-// RssSource
 interface RssSource {
   label: string
   url: string
@@ -88,15 +133,25 @@ interface RssSource {
 ---
 
 ## Rendering Strategy
-- `app/page.tsx` — Server Component, runs `fetchNews()` at request time
-- ISR revalidation: `export const revalidate = 21600` (6 hours)
-- All other sections are static — no data fetching beyond news
-- No client-side JS required for core content (progressive enhancement only)
+| Route | Strategy | Notes |
+|-------|----------|-------|
+| `/` | Server Component + ISR | `revalidate = 21600`, fetches news |
+| `/portfolio/ai-workflow-automation` | Server Component | static JSON import |
+| `/skills` | Server Component | hardcoded data |
+| All sections on `/` | Client Components | need `useLanguage()` context |
+| `PageHeader` | Server Component | imports client `LangSwitcher` (island) |
+
+---
+
+## Adding a New Portfolio Category Page
+1. Add entry to `data/products.json` with `"link": "/portfolio/[id]"`
+2. Create `data/projects/[id].json` with project array
+3. Create `app/portfolio/[id]/page.tsx` — copy structure from `ai-workflow-automation/page.tsx`, update category label
 
 ---
 
 ## Deployment
 - Push to `main` → Vercel auto-deploys
-- Environment variables: none required for v1
-- ISR cache is managed by Vercel's edge network automatically
+- No environment variables required
+- ISR cache managed by Vercel edge network
 - No database, no backend API, no auth
