@@ -2,7 +2,7 @@
 
 Minimal landing page for ac-ai-agent — an AI consulting service. Built with Next.js 14, Tailwind CSS, and TypeScript. Deployed on Vercel.
 
-**Live URL:** _coming soon_
+**Live URL:** https://ac-ai-agent-landing.vercel.app
 
 ---
 
@@ -28,6 +28,10 @@ npm run build
 |-------|-------------|
 | `/` | Landing page — hero, portfolio grid, AI news sidebar |
 | `/portfolio/ai-workflow-automation` | AI Workflow Automation project showcase |
+| `/portfolio/ai-agent-systems` | AI Agent Systems project showcase |
+| `/portfolio/rag-systems` | RAG & Knowledge Systems project showcase |
+| `/portfolio/cowork-projects` | Cowork Projects showcase |
+| `/portfolio/ai-strategy` | AI Strategy & Roadmap project showcase |
 | `/skills` | Custom Claude AI skills (stock-report, portfolio-credit-risk, performance-attribution) |
 
 ---
