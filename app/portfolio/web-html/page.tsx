@@ -1,6 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
-import projectsData from "@/data/projects/ai-strategy.json";
+import projectsData from "@/data/projects/web-html.json";
 
 interface Project {
   id: string;
@@ -17,11 +17,11 @@ interface Project {
 const projects = projectsData as Project[];
 
 export const metadata = {
-  title: "AI Strategy & Roadmap — ac-ai-agent",
-  description: "Portfolio of AI strategy and roadmap projects by ac-ai-agent.",
+  title: "Web / HTML — ac-ai-agent",
+  description: "Web applications and HTML artifacts built with AI — dashboards, reports, and interactive tools.",
 };
 
-export default function AIStrategyPage() {
+export default function WebHTMLPage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white flex flex-col">
       <PageHeader backLabel="← home" backHref="/" />
@@ -30,9 +30,9 @@ export default function AIStrategyPage() {
       <section className="border-b border-white/5 px-6 py-10">
         <div className="max-w-5xl mx-auto">
           <p className="text-[10px] font-mono text-violet-400 tracking-widest uppercase mb-2">Portfolio</p>
-          <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">AI Strategy & Roadmap</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white tracking-tight">Web / HTML</h1>
           <p className="text-sm text-neutral-400 mt-2 max-w-xl leading-relaxed">
-            Tailored AI adoption strategy — from identifying high-value use cases to building your first AI team and shipping to production.
+            Web applications and HTML artifacts built with AI — dashboards, interactive reports, and browser-based tools.
           </p>
         </div>
       </section>
@@ -65,7 +65,7 @@ export default function AIStrategyPage() {
               </div>
               <div className="md:w-[55%] p-7 flex flex-col justify-center gap-4">
                 <div>
-                  <p className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest mb-1">AI Strategy & Roadmap</p>
+                  <p className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest mb-1">Web / HTML</p>
                   <h2 className="text-xl font-bold text-white">{project.title}</h2>
                   <p className="text-sm text-violet-400 mt-1">{project.tagline}</p>
                 </div>

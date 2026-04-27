@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ShowcaseSection from "@/components/ShowcaseSection";
 import NewsSidebar from "@/components/NewsSidebar";
-import LangSwitcher from "@/components/LangSwitcher";
 import Footer from "@/components/Footer";
 
 export const revalidate = 21600;
@@ -17,9 +16,6 @@ export default async function Home() {
       <div className="fixed top-0 left-0 right-0 z-50 bg-neutral-950/90 backdrop-blur-md border-b border-white/5">
         <nav className="max-w-5xl mx-auto px-6 h-10 flex items-center">
           <span className="font-mono text-sm font-semibold tracking-tight text-white">ac-ai-agent</span>
-          <div className="ml-auto">
-            <LangSwitcher />
-          </div>
         </nav>
       </div>
 

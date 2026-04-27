@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import LangSwitcher from './LangSwitcher';
 
 export default function PageHeader({ backLabel = '← back', backHref = '/' }: { backLabel?: string; backHref?: string }) {
   return (
@@ -12,9 +11,6 @@ export default function PageHeader({ backLabel = '← back', backHref = '/' }: {
         <Link href="/" className="font-mono text-sm font-semibold tracking-tight text-white">
           ac-ai-agent
         </Link>
-        <div className="ml-auto">
-          <LangSwitcher />
-        </div>
       </nav>
     </div>
   );

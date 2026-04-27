@@ -1,12 +1,4 @@
-'use client';
-
-import { useLanguage } from '@/contexts/LanguageContext';
-import { t } from '@/lib/translations';
-
 export default function HeroSection() {
-  const { lang } = useLanguage();
-  const tr = t[lang].hero;
-
   return (
     <section className="relative bg-neutral-950 overflow-hidden flex-shrink-0">
       <div
@@ -24,24 +16,24 @@ export default function HeroSection() {
           <div>
             <div className="inline-flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-0.5 mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span className="text-[10px] font-mono text-white/50 tracking-widest uppercase">{tr.badge}</span>
+              <span className="text-[10px] font-mono text-white/50 tracking-widest uppercase">Available for projects</span>
             </div>
             <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight tracking-tight">
-              {tr.h1a}{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">{tr.h1b}</span>
-              {" "}<span className="text-white/30">{tr.h1c}</span>
+              Build smarter{" "}
+              <span className="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">with AI,</span>
+              {" "}<span className="text-white/30">done right.</span>
             </h1>
           </div>
 
           <div className="flex flex-col gap-2 md:items-end flex-shrink-0">
             <p className="text-xs text-white/40 max-w-[200px] leading-relaxed md:text-right">
-              {tr.sub}
+              Practical AI consulting — from simple workflow to autonomous agent systems.
             </p>
             <a
               href="mailto:arunsakcharoon@gmail.com"
               className="inline-flex items-center gap-1.5 bg-white text-neutral-900 px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-white/90 transition-colors self-start md:self-auto"
             >
-              {tr.cta}
+              Contact me →
             </a>
           </div>
         </div>

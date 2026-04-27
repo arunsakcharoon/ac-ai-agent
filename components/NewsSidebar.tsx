@@ -1,8 +1,4 @@
-'use client';
-
 import { NewsItem } from "@/lib/fetchNews";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { t } from "@/lib/translations";
 
 function formatDate(dateStr: string): string {
   if (!dateStr) return "";
@@ -12,16 +8,14 @@ function formatDate(dateStr: string): string {
 }
 
 export default function NewsSidebar({ items }: { items: NewsItem[] }) {
-  const { lang } = useLanguage();
-  const tr = t[lang].news;
   const visible = items.slice(0, 6);
 
   return (
     <div className="bg-neutral-900 px-5 py-4 h-full flex flex-col">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-[10px] font-mono tracking-widest uppercase text-neutral-500">{tr.heading}</h2>
+        <h2 className="text-[10px] font-mono tracking-widest uppercase text-neutral-500">AI News</h2>
         <span className="text-[9px] text-neutral-600 font-mono bg-white/5 border border-white/5 px-2 py-0.5 rounded-full">
-          {tr.live}
+          Live · 6h
         </span>
       </div>
 

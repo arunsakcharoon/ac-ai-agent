@@ -1,5 +1,21 @@
 [
   {
+    "id": "cowork-projects",
+    "name": "Cowork Projects",
+    "description": "Collaborative AI projects built alongside clients and partner teams.",
+    "category": "Collaboration",
+    "link": "/portfolio/cowork-projects",
+    "featured": true
+  },
+  {
+    "id": "web-html",
+    "name": "Web / HTML",
+    "description": "Web applications and HTML artifacts built with AI — dashboards, reports, and interactive tools.",
+    "category": "Web",
+    "link": "/portfolio/web-html",
+    "featured": true
+  },
+  {
     "id": "ai-workflow-automation",
     "name": "AI Workflow Automation",
     "description": "End-to-end automation of repetitive business processes using LLMs and custom AI agents.",
@@ -13,15 +29,7 @@
     "description": "Custom AI skills built as Claude slash commands for finance, research, and agent workflows.",
     "category": "Skills",
     "link": "/skills",
-    "featured": true
-  },
-  {
-    "id": "ai-agent-systems",
-    "name": "AI Agent Systems",
-    "description": "Design and deploy multi-agent systems that reason, plan, and act autonomously on your behalf.",
-    "category": "Agents",
-    "link": "/portfolio/ai-agent-systems",
-    "featured": true
+    "featured": false
   },
   {
     "id": "rag-systems",
@@ -32,19 +40,11 @@
     "featured": false
   },
   {
-    "id": "cowork-projects",
-    "name": "Cowork Projects",
-    "description": "Collaborative AI projects built alongside clients and partner teams.",
-    "category": "Collaboration",
-    "link": "/portfolio/cowork-projects",
-    "featured": false
-  },
-  {
-    "id": "ai-strategy",
-    "name": "AI Strategy & Roadmap",
-    "description": "Tailored AI adoption strategy — from identifying high-value use cases to building your first AI team.",
-    "category": "Strategy",
-    "link": "/portfolio/ai-strategy",
+    "id": "ai-agent-systems",
+    "name": "AI Agent Systems",
+    "description": "Design and deploy multi-agent systems that reason, plan, and act autonomously on your behalf.",
+    "category": "Agents",
+    "link": "/portfolio/ai-agent-systems",
     "featured": false
   }
 ]
