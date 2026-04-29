@@ -20,5 +20,60 @@
     "liveUrl": null,
     "screenshots": [],
     "outcome": "Full-stack agentic trading simulator with 19 specialized agents, multi-LLM support, and a built-in backtester"
+  },
+  {
+    "id": "ap1-email-auto-response-agent",
+    "title": "Email Auto-Response Agent",
+    "tagline": "Flask web app that drafts automated email replies using AI",
+    "description": "A Python/Flask web application that generates automated email responses. Users paste an incoming email and the agent drafts a context-aware reply using an LLM, reducing manual response time for repetitive inbox workflows.",
+    "tools": ["Python", "Flask", "Anthropic SDK", "HTML"],
+    "githubUrl": "https://github.com/arunsakcharoon/ap1-email-auto-response-agent",
+    "liveUrl": "https://ap1-email-auto-response-agent.vercel.app",
+    "screenshots": [],
+    "outcome": "Web-based email agent that automates reply drafting with a serverless Flask backend"
+  },
+  {
+    "id": "ap2-chatbot-widget",
+    "title": "Chatbot Widget",
+    "tagline": "Embeddable AI chat widget with a Flask backend for any website",
+    "description": "A drop-in chatbot widget (chat-widget.js) backed by a Python/Flask API. The backend is primed with a business context file so the bot answers questions about a specific business. Embed with a single script tag — no framework required on the host page.",
+    "tools": ["Python", "Flask", "JavaScript", "HTML", "Anthropic SDK"],
+    "githubUrl": "https://github.com/arunsakcharoon/ap2-chatbot-widget",
+    "liveUrl": "https://ap2-chatbot-widget.vercel.app",
+    "screenshots": [],
+    "outcome": "Reusable embeddable chat widget with business-context grounding and Flask API backend"
+  },
+  {
+    "id": "ap3-document-summarizer-agent",
+    "title": "Document Summarizer Agent",
+    "tagline": "Claude-powered agent that reads and summarizes uploaded documents",
+    "description": "A Flask web app that uses the Anthropic Claude Agent SDK to process and summarize documents. Users upload a file through the web interface and receive a structured summary, enabling fast triage of long reports or contracts.",
+    "tools": ["Python", "Flask", "Anthropic SDK", "HTML"],
+    "githubUrl": "https://github.com/arunsakcharoon/ap3-document-summarizer-agent",
+    "liveUrl": "https://ap3-document-summarizer-agent.vercel.app",
+    "screenshots": [],
+    "outcome": "Web-based document agent that delivers structured summaries via Claude's agent SDK"
+  },
+  {
+    "id": "ap4-social-media-content-generator",
+    "title": "Social Media Content Generator",
+    "tagline": "AI tool for generating platform-ready social media posts from a brief",
+    "description": "A Python/Flask web app that takes a topic or product brief and generates ready-to-post content tailored for social media platforms. Useful for automating repetitive content creation tasks in marketing workflows.",
+    "tools": ["Python", "Flask", "Anthropic SDK", "HTML"],
+    "githubUrl": "https://github.com/arunsakcharoon/ap4-social-media-content-generator",
+    "liveUrl": "https://ap4-social-media-content-generator.vercel.app",
+    "screenshots": [],
+    "outcome": "Flask-based content agent that generates platform-ready social posts from a short brief"
+  },
+  {
+    "id": "ap7-product-description-writer",
+    "title": "Product Description Writer",
+    "tagline": "Bulk AI copywriter that generates SEO-optimised product listings from a CSV",
+    "description": "A Next.js 15 app that uses the Claude API to generate SEO-optimised product titles, descriptions, feature bullets, and keywords. Supports single-product input and bulk CSV uploads (up to 100 rows) with real-time progress via Server-Sent Events. Choose from four tones — Professional, Casual, Luxury, or Budget-Friendly — and export results as CSV.",
+    "tools": ["Next.js", "TypeScript", "Tailwind CSS", "Anthropic SDK", "shadcn/ui"],
+    "githubUrl": "https://github.com/arunsakcharoon/ap7-product-description-writer",
+    "liveUrl": null,
+    "screenshots": [],
+    "outcome": "Streaming bulk product copywriter with CSV import/export, tone selection, and rate limiting"
   }
 ]
