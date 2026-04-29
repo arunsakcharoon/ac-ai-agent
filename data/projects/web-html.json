@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": "investiq",
+    "title": "InvestIQ",
+    "tagline": "Investment news webapp with live market updates",
+    "description": "A lightweight HTML web app that delivers curated investment news to users. Built and deployed entirely as a static site on Vercel with minimal dependencies — fast load, zero build step.",
+    "tools": ["HTML", "Vercel"],
+    "githubUrl": "https://github.com/arunsakcharoon/investiq",
+    "liveUrl": "https://investiq-taupe.vercel.app",
+    "screenshots": [],
+    "outcome": "Live static webapp serving investment news updates with Vercel deployment"
+  },
+  {
+    "id": "todo-pwa-v1",
+    "title": "Todo PWA",
+    "tagline": "Offline-first progressive web app for task management",
+    "description": "A vanilla JavaScript PWA that works fully offline via a service worker and persists todos in localStorage. Supports add/edit/delete, three filter views (All / Active / Done), real-time online/offline status detection, and is installable as a standalone app on mobile and desktop.",
+    "tools": ["HTML", "CSS", "JavaScript", "Service Workers"],
+    "githubUrl": "https://github.com/arunsakcharoon/todo-pwa-v1",
+    "liveUrl": "https://todo-pwa-gamma.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable offline-first todo app with service worker caching and localStorage persistence"
+  },
+  {
+    "id": "livewell-app",
+    "title": "LiveWell App",
+    "tagline": "AI-powered wellness platform for health, finance, and relationships",
+    "description": "A Next.js PWA offering three AI-driven suites: a Health Suite with symptom checker and medication reminders, a Finance Suite with budget planner and retirement calculator, and a Relationship Suite with communication coaching and family check-ins. Designed for Thai users with a clean subscription model and offline capability.",
+    "tools": ["Next.js", "React", "Tailwind CSS", "next-pwa"],
+    "githubUrl": "https://github.com/arunsakcharoon/livewell-app",
+    "liveUrl": "https://livewell-app-indol.vercel.app",
+    "screenshots": [],
+    "outcome": "Multi-suite AI wellness PWA with health, finance, and relationship coaching modules"
+  }
+]
