@@ -75,5 +75,16 @@
     "liveUrl": null,
     "screenshots": [],
     "outcome": "Streaming bulk product copywriter with CSV import/export, tone selection, and rate limiting"
+  },
+  {
+    "id": "job-market-snapshot",
+    "title": "Job Market Snapshot",
+    "tagline": "AI-powered Thai job market analyser for HR professionals and job seekers",
+    "description": "A Next.js 16 app that uses the Claude API with web search to analyse the Thai job market in real time. Search by role or industry to see trending job openings, top 3–5 in-demand skills with demand metrics, salary ranges by experience level in Thai Baht, and AI-generated market insights — all streamed live and available in Thai and English.",
+    "tools": ["Next.js", "TypeScript", "Tailwind CSS", "Anthropic SDK", "Zod"],
+    "githubUrl": "https://github.com/arunsakcharoon/job-market-snapshot",
+    "liveUrl": null,
+    "screenshots": [],
+    "outcome": "Streaming bilingual job market analyser with Claude-powered insights, skill demand metrics, and salary data"
   }
 ]
