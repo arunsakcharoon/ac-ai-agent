@@ -31,5 +31,71 @@
     "liveUrl": "https://livewell-app-indol.vercel.app",
     "screenshots": [],
     "outcome": "Multi-suite AI wellness PWA with health, finance, and relationship coaching modules"
+  },
+  {
+    "id": "p1-digital-business-card",
+    "title": "Digital Business Card",
+    "tagline": "PWA business card with QR code generation for instant contact sharing",
+    "description": "A progressive web app that displays a digital business card with a built-in QR code generator. Visitors can scan the QR code to save contact details instantly. Installable as a standalone app on mobile and desktop.",
+    "tools": ["HTML", "CSS", "JavaScript", "qrcode.js"],
+    "githubUrl": "https://github.com/arunsakcharoon/p1-digital-business-card",
+    "liveUrl": "https://p1-digital-business-card.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable PWA with QR code sharing and responsive profile card layout"
+  },
+  {
+    "id": "p2-tip-calculator",
+    "title": "Tip Calculator",
+    "tagline": "Offline-capable PWA for fast gratuity and bill splitting",
+    "description": "A lightweight progressive web app for calculating tips and splitting bills. Runs fully offline via a service worker and is installable on any device — no app store required.",
+    "tools": ["HTML", "CSS", "JavaScript", "Service Workers"],
+    "githubUrl": "https://github.com/arunsakcharoon/p2-tip-calculator",
+    "liveUrl": "https://p2-tip-calculator.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable offline-capable tip calculator with instant client-side calculations"
+  },
+  {
+    "id": "p3-counter-timer-event",
+    "title": "Counter & Event Timer",
+    "tagline": "PWA counter and countdown timer for tracking events",
+    "description": "A progressive web app combining a general-purpose counter with a countdown timer for events. Works offline via service worker and installs as a standalone app.",
+    "tools": ["HTML", "CSS", "JavaScript", "Service Workers"],
+    "githubUrl": "https://github.com/arunsakcharoon/p3-counter-timer-event",
+    "liveUrl": "https://p3-counter-timer-event.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable PWA with offline counter and event countdown functionality"
+  },
+  {
+    "id": "p4-personal-budget-tracker",
+    "title": "Personal Budget Tracker",
+    "tagline": "Offline-first PWA for tracking income, expenses, and savings",
+    "description": "A vanilla JavaScript progressive web app for managing personal finances. Track income and expenses, monitor spending categories, and view balance summaries — all stored locally in the browser with offline support via service worker.",
+    "tools": ["HTML", "CSS", "JavaScript", "Service Workers"],
+    "githubUrl": "https://github.com/arunsakcharoon/p4-personal-budget-tracker",
+    "liveUrl": "https://p4-personal-budget-tracker.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable offline-first budget tracker with local data persistence"
+  },
+  {
+    "id": "p5-recipe-box-cookbook",
+    "title": "Recipe Box Cookbook",
+    "tagline": "PWA cookbook for storing and browsing personal recipes offline",
+    "description": "A client-side progressive web app for managing a personal recipe collection. Add, browse, and view recipes with offline support — no server or account required. Installable as a standalone app.",
+    "tools": ["HTML", "CSS", "JavaScript", "Service Workers"],
+    "githubUrl": "https://github.com/arunsakcharoon/p5-recipe-box-cookbook",
+    "liveUrl": "https://p5-recipe-box-cookbook.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable offline-capable recipe manager with client-side storage"
+  },
+  {
+    "id": "p6-pomodoro-focus-timer",
+    "title": "Pomodoro Focus Timer",
+    "tagline": "PWA productivity timer using the Pomodoro Technique",
+    "description": "A progressive web app implementing the Pomodoro Technique — 25-minute work sessions alternating with short breaks. Runs offline via service worker and installs on any device for distraction-free focus sessions.",
+    "tools": ["HTML", "JavaScript", "Service Workers"],
+    "githubUrl": "https://github.com/arunsakcharoon/p6-pomodoro-focus-timer",
+    "liveUrl": "https://p6-pomodoro-focus-timer.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable offline Pomodoro timer for structured focus and break intervals"
   }
 ]
