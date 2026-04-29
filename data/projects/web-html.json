@@ -97,5 +97,16 @@
     "liveUrl": "https://p6-pomodoro-focus-timer.vercel.app",
     "screenshots": [],
     "outcome": "Installable offline Pomodoro timer for structured focus and break intervals"
+  },
+  {
+    "id": "ac-invest",
+    "title": "AC Invest",
+    "tagline": "Bilingual Thai/English PWA for retail investors — news, bonds, dividends, and research",
+    "description": "A Next.js 16 progressive web app delivering investment information to Thai retail investors in both Thai and English. Features daily MDX market news, a filterable Bond IPO tracker, SET50 dividend yield tables, and in-depth research reports. Content is served via Vercel Blob with a JSON fallback, and the app installs offline on any device.",
+    "tools": ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "next-intl", "MDX", "next-pwa"],
+    "githubUrl": "https://github.com/arunsakcharoon/ac-invest",
+    "liveUrl": "https://ac-invest.vercel.app",
+    "screenshots": [],
+    "outcome": "Installable bilingual investment PWA with live bond IPO tracker, dividend data, and daily market news"
   }
 ]
