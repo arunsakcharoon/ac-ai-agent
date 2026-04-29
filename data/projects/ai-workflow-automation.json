@@ -9,5 +9,16 @@
     "liveUrl": null,
     "screenshots": [],
     "outcome": "Functional agentic loop with structured tool use and dual CLI + web interface"
+  },
+  {
+    "id": "ai-hedge-fund",
+    "title": "AI Hedge Fund",
+    "tagline": "19-agent LLM system that simulates famous investors to generate stock trading signals",
+    "description": "An educational multi-agent trading system built on LangGraph and LangChain. Thirteen investor-personality agents (Warren Buffett, Michael Burry, Cathie Wood, and others) each apply their real-world investment philosophy to live financial data, then six analytical agents aggregate signals into a final portfolio decision. Ships with a FastAPI backend, a React web UI with agent-graph visualization, and a point-in-time backtester.",
+    "tools": ["Python", "LangGraph", "LangChain", "FastAPI", "React", "Anthropic SDK", "OpenAI API", "Financial Datasets API"],
+    "githubUrl": "https://github.com/arunsakcharoon/ai-hedge-fund",
+    "liveUrl": null,
+    "screenshots": [],
+    "outcome": "Full-stack agentic trading simulator with 19 specialized agents, multi-LLM support, and a built-in backtester"
   }
 ]
